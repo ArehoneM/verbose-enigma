@@ -20,9 +20,6 @@ pipeline {
         stage('Push Image & Tag for Environments') {
             steps {
                 sh """
-                    # Log in (if your registry requires auth)
-                    podman login ${REGISTRY} --tls-verify=false
-
                     # Push base image
                     podman push --tls-verify=false ${REGISTRY}/${APP_NAME}:${VERSION}
 
