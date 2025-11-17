@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'fedora'}
+    agent any
 
     environment {
         REGISTRY = "localhost:5000"
